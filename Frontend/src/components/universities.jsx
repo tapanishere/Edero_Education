@@ -1,6 +1,6 @@
 import React from "react";
 import jain from '../assets/images/jain.jpeg'
-import Chandigarh from '../assets/images/Chandigarh.png'
+import Chandigarh from '../assets/images/chandigarh.png'
 import Patil from '../assets/images/Patil.png'
 import op_jindal from '../assets/images/op-jindal.png'
 import Vivekananda  from '../assets/images/Vivekananda.png'

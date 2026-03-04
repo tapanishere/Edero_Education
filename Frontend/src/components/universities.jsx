@@ -5,7 +5,7 @@ import Patil from '../assets/images/Patil.png'
 import op_jindal from '../assets/images/op-jindal.png'
 import Vivekananda  from '../assets/images/Vivekananda.png'
 import Alliance from '../assets/images/Alliance.png'
-import  Vignans from '../assets/images/Vignans.png'
+import Vignans from '../assets/images/Vignans.png'
 import vistas from '../assets/images/VISTAS.jpg'
 const universities = [
   {logo:jain},

@@ -1,6 +1,6 @@
 import React from "react";
 import jain from '../assets/logos/jain.png'
-import Chandigarh_University from '../assets/logos/chandigarh-University.png'
+import Chandigarh_University from '../assets/logos/chandigarh-university.png'
 import DYPatil from '../assets/logos/D.Y.Patil.webp'
 import Andhra_University from '../assets/logos/Andhra_University_logo.png'
 import Kurukshetra_Universiy from '../assets/logos/Kurukshetra_Universiy.png'

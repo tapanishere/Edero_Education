@@ -65,41 +65,103 @@ const DegreeSection = () => {
 
   const renderCard = (program) => (
     <div
-      key={program.code}
-      className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm shadow-slate-100 transition hover:-translate-y-1 hover:shadow-md md:p-6"
+      key={`${program.code}-${program.name}-${program.duration}-${Math.random()}`}
+      className="group h-full relative flex min-w-[240px] max-w-sm flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-sm shadow-slate-100 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-300 hover:bg-white hover:shadow-xl hover:shadow-amber-200/40 md:p-6"
     >
-      <div className="space-y-3">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-600">
-            <span className="text-xl">🎓</span>
+      <div className="pointer-events-none absolute inset-0 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-80">
+        <div className="absolute -inset-16 bg-[conic-gradient(at_top,#fbbf24_0deg,#22d3ee_120deg,#6366f1_240deg,#f97316_360deg)] opacity-40 mix-blend-screen" />
+      </div>
+
+      <div className="relative space-y-4">
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-amber-400 to-orange-500 text-white shadow-md shadow-amber-300/60">
+              <span className="text-xl">🎓</span>
+            </div>
+            <div>
+              <p className="inline-flex items-center rounded-full bg-slate-900/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500 sm:text-[11px]">
+                {program.code}
+              </p>
+              <h3 className="mt-1 text-sm font-semibold text-slate-900 sm:text-base">
+                {program.name}
+              </h3>
+            </div>
           </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              {program.code}
-            </p>
-            <h3 className="text-sm font-semibold text-slate-900 sm:text-base">
-              {program.name}
-            </h3>
+
+          <div className="hidden text-[10px] font-medium text-slate-400 sm:inline-flex">
+            Online Degree
           </div>
         </div>
+
         <p className="text-xs leading-relaxed text-slate-500 sm:text-sm">
           {program.description}
         </p>
       </div>
 
-      <div className="mt-4 flex items-center justify-between text-xs text-slate-500 sm:text-sm">
+      <div className="relative mt-4 flex items-center justify-between text-[11px] text-slate-500 sm:mt-5 sm:text-xs">
         <div className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-[11px] font-semibold text-slate-700">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/5 text-[11px] font-semibold text-slate-700 transition-colors group-hover:bg-amber-100 group-hover:text-amber-700">
             ⏱
           </span>
-          <span>{program.duration}</span>
+          <span className="font-medium">{program.duration}</span>
         </div>
+
+        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700 ring-1 ring-emerald-100">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+          NAAC / UGC Approved
+        </span>
       </div>
     </div>
   );
 
+  const renderScrollingRow = (programs, direction = "left") => {
+    const duplicated = [...programs, ...programs];
+
+    const animationStyle =
+      direction === "left"
+        ? { animation: "scroll-left 7s linear infinite" }
+        : { animation: "scroll-right 7s linear infinite" };
+
+    return (
+      <div className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-linear-to-r from-slate-50 to-transparent sm:w-16" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-linear-to-l from-slate-50 to-transparent sm:w-16" />
+
+        <div className="flex gap-4 sm:gap-5" style={animationStyle}>
+          {duplicated.map((program, index) => (
+            <div key={`${program.code}-${direction}-${index}`}>
+              {renderCard(program)}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className="bg-slate-50 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <>
+      <style>
+        {`
+          @keyframes scroll-left {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          @keyframes scroll-right {
+            0% {
+              transform: translateX(-50%);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+        `}
+      </style>
+      <section className="bg-slate-50 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400 sm:text-sm">
@@ -114,7 +176,7 @@ const DegreeSection = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="mt-10 space-y-8">
           {/* Undergraduate */}
           <div className="rounded-3xl bg-white/80 p-5 shadow-sm ring-1 ring-slate-100 backdrop-blur-sm sm:p-6 md:p-8">
             <div className="mb-5 flex items-center justify-between gap-3">
@@ -128,9 +190,7 @@ const DegreeSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-              {undergraduatePrograms.map(renderCard)}
-            </div>
+            {renderScrollingRow(undergraduatePrograms, "left")}
           </div>
 
           {/* Postgraduate */}
@@ -147,19 +207,18 @@ const DegreeSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-              {postgraduatePrograms.map(renderCard)}
-            </div>
+            {renderScrollingRow(postgraduatePrograms, "right")}
           </div>
         </div>
-          <div className="mt-10 flex justify-center">
 
-      <button className=" m-auto inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-400/40 transition hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
-              Explore Programs
-            </button>
-          </div>
+        <div className="mt-10 flex justify-center">
+          <button className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-400/40 transition hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
+            Explore Programs
+          </button>
+        </div>
       </div>
     </section>
+    </>
   );
 };
 

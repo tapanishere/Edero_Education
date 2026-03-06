@@ -6,6 +6,10 @@ import DegreeSection from './DegreeSection'
 import Whyedero from './Whyedero'
 import UniversitisList from './UniversitisList'
 import Footer from './Footer'
+import AddmissionProcess from './AddmissionProcess'
+import CareerValues from './CareerValues'
+import Categories from './Categories'
+import Testimonials from './Testimonials'
 const Home = () => {
   return (
     <>
@@ -13,9 +17,13 @@ const Home = () => {
         <Header />
         <Hero/>
         <Statistics/>
-        <DegreeSection/>
         <UniversitisList/>
+        <DegreeSection/>
         <Whyedero/>
+        <AddmissionProcess/>
+        <CareerValues/>
+        <Categories/>
+        <Testimonials/>
         <Footer/>
     </div>
     </>

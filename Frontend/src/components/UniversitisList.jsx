@@ -150,8 +150,33 @@ const UniversityCard = ({ item }) => {
 };
 
 const UniversitisList = () => {
+  const scrollingUniversities = [...universities, ...universities];
+
+  const marqueeStyles = `
+    @keyframes universities-marquee-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .universities-marquee-track {
+      display: inline-flex;
+      gap: 1rem;
+      animation: universities-marquee-left 30s linear infinite;
+      will-change: transform;
+    }
+
+    .universities-marquee-track:hover {
+      animation-play-state: paused;
+    }
+  `;
+
   return (
     <section className="relative overflow-hidden bg-slate-50 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+      <style>{marqueeStyles}</style>
       {/* subtle background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-amber-200/30 blur-3xl" />
@@ -182,10 +207,19 @@ const UniversitisList = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5  lg:grid-cols-3 2xl:grid-cols-3">
-          {universities.map((u) => (
-            <UniversityCard key={u.name} item={u} />
-          ))}
+        <div className="mt-10 relative">
+          <div className="overflow-hidden">
+            <div className="universities-marquee-track">
+              {scrollingUniversities.map((u, idx) => (
+                <div
+                  key={`${u.name}-${idx}`}
+                  className="min-w-[260px] max-w-xs"
+                >
+                  <UniversityCard item={u} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 flex justify-center items-center">

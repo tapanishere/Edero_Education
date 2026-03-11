@@ -3,222 +3,202 @@ import React from "react";
 const DegreeSection = () => {
   const undergraduatePrograms = [
     {
-      code: "BBA",
-      name: "Bachelor of Business Administration",
+      code: "BCom",
+      name: "Online BCom",
       description:
-        "Holistic business program with strong industry connections and practical learning.",
+        "Acquire comprehensive knowledge in commerce, finance, and accounting.",
       duration: "3 Years",
     },
     {
       code: "BCA",
-      name: "Bachelor of Computer Applications",
+      name: "Online BCA",
       description:
-        "Career-ready program in computer science, data structures, and modern frameworks.",
+        "Master the fundamentals of computer applications and IT systems.",
+      duration: "3 Years",
+    },
+    {
+      code: "BBA",
+      name: "Online BBA",
+      description:
+        "Develop strong leadership, strategy, and business management skills.",
       duration: "3 Years",
     },
     {
       code: "BA",
-      name: "Bachelor of Arts",
+      name: "Online BA",
       description:
-        "Flexible program with interdisciplinary focus on humanities and social sciences.",
-      duration: "3 Years",
-    },
-    {
-      code: "B.Com",
-      name: "Bachelor of Commerce",
-      description:
-        "Comprehensive commerce degree with focus on finance, accounting, and taxation.",
+        "Explore humanities and social sciences with a flexible curriculum.",
       duration: "3 Years",
     },
   ];
 
   const postgraduatePrograms = [
     {
-      code: "MBA",
-      name: "Master of Business Administration",
+      code: "Masters",
+      name: "Master's Programs",
       description:
-        "Industry-aligned MBA with specializations, live projects, and leadership focus.",
+        "Advance your career with flexible, industry-aligned online postgraduate degrees.",
+      duration: "2–3 Years",
+    },
+    {
+      code: "PGDM",
+      name: "Online PGDM",
+      description:
+        "Master essential management principles with a practice-oriented approach.",
       duration: "2 Years",
+    },
+    {
+      code: "PGD",
+      name: "Online PG Diploma",
+      description:
+        "Upskill quickly with focused, outcome-driven postgraduate diplomas.",
+      duration: "1 Year",
     },
     {
       code: "MCA",
-      name: "Master of Computer Applications",
+      name: "Online MCA",
       description:
-        "Advanced program in software engineering, data science, and cloud technologies.",
+        "Gain deep expertise in modern software development, data, and cloud.",
       duration: "3 Years",
-    },
-    {
-      code: "MA",
-      name: "Master of Arts",
-      description:
-        "Deep dive into humanities with research-driven curriculum and electives.",
-      duration: "2 Years",
-    },
-    {
-      code: "M.Com",
-      name: "Master of Commerce",
-      description:
-        "Advanced commerce program with focus on analytics, taxation, and corporate finance.",
-      duration: "2 Years",
     },
   ];
 
-  const renderCard = (program) => (
-    <div
-      key={`${program.code}-${program.name}-${program.duration}-${Math.random()}`}
-      className="group h-full relative flex min-w-[240px] max-w-sm flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 p-5 shadow-sm shadow-slate-100 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-amber-300 hover:bg-white hover:shadow-xl hover:shadow-amber-200/40 md:p-6"
-    >
-      <div className="pointer-events-none absolute inset-0 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-80">
-        <div className="absolute -inset-16 bg-[conic-gradient(at_top,#fbbf24_0deg,#22d3ee_120deg,#6366f1_240deg,#f97316_360deg)] opacity-40 mix-blend-screen" />
-      </div>
-
-      <div className="relative space-y-4">
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-linear-to-br from-amber-400 to-orange-500 text-white shadow-md shadow-amber-300/60">
-              <span className="text-xl">🎓</span>
-            </div>
-            <div>
-              <p className="inline-flex items-center rounded-full bg-slate-900/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500 sm:text-[11px]">
-                {program.code}
-              </p>
-              <h3 className="mt-1 text-sm font-semibold text-slate-900 sm:text-base">
-                {program.name}
-              </h3>
-            </div>
-          </div>
-
-          <div className="hidden text-[10px] font-medium text-slate-400 sm:inline-flex">
-            Online Degree
-          </div>
+  const ProgramCard = ({ program }) => {
+    return (
+      <div className="group flex min-w-[260px] shrink-0 flex-col rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm transition-all duration-200 hover:border-sky-200 hover:bg-sky-50/40 hover:shadow-md sm:p-6">
+        <div className="mb-1 text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400">
+          {program.code}
         </div>
-
-        <p className="text-xs leading-relaxed text-slate-500 sm:text-sm">
+        <h3 className="mb-2 text-base font-semibold text-slate-900 sm:text-lg">
+          {program.name}
+        </h3>
+        <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-600">
           {program.description}
         </p>
-      </div>
-
-      <div className="relative mt-4 flex items-center justify-between text-[11px] text-slate-500 sm:mt-5 sm:text-xs">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-900/5 text-[11px] font-semibold text-slate-700 transition-colors group-hover:bg-amber-100 group-hover:text-amber-700">
-            ⏱
-          </span>
-          <span className="font-medium">{program.duration}</span>
-        </div>
-
-        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700 ring-1 ring-emerald-100">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-          NAAC / UGC Approved
-        </span>
-      </div>
-    </div>
-  );
-
-  const renderScrollingRow = (programs, direction = "left") => {
-    const duplicated = [...programs, ...programs];
-
-    const animationStyle =
-      direction === "left"
-        ? { animation: "scroll-left 7s linear infinite" }
-        : { animation: "scroll-right 7s linear infinite" };
-
-    return (
-      <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-linear-to-r from-slate-50 to-transparent sm:w-16" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-linear-to-l from-slate-50 to-transparent sm:w-16" />
-
-        <div className="flex gap-4 sm:gap-5" style={animationStyle}>
-          {duplicated.map((program, index) => (
-            <div key={`${program.code}-${direction}-${index}`}>
-              {renderCard(program)}
-            </div>
-          ))}
+        <div className="flex items-center justify-between border-t border-slate-100 pt-4 text-xs text-slate-500">
+          <span>{program.duration}</span>
+          <span className="font-medium text-emerald-600">NAAC Approved</span>
         </div>
       </div>
     );
   };
 
   return (
-    <>
-      <style>
-        {`
-          @keyframes scroll-left {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-
-          @keyframes scroll-right {
-            0% {
-              transform: translateX(-50%);
-            }
-            100% {
-              transform: translateX(0);
-            }
-          }
-        `}
-      </style>
-      <section className="bg-slate-50 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <section className="bg-slate-50 px-4 py-12 sm:px-6 md:py-16 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400 sm:text-sm">
-            Our Programs
+            Our Flexible
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
-            Our Online Degree Programs
+            Our Flexible{" "}
+            <span className="text-slate-600">Online Programs</span>
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-xs text-slate-500 sm:text-sm md:text-base">
-            All programs delivered through accredited and government-recognized
-            institutions with flexible, learner-centric schedules.
+            Choose from a wide range of accredited postgraduate and
+            undergraduate online degree programs that fit your schedule.
           </p>
         </div>
 
-        <div className="mt-10 space-y-8">
-          {/* Undergraduate */}
-          <div className="rounded-3xl bg-white/80 p-5 shadow-sm ring-1 ring-slate-100 backdrop-blur-sm sm:p-6 md:p-8">
-            <div className="mb-5 flex items-center justify-between gap-3">
-              <div>
-                <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
-                  Undergraduate
-                </h3>
-                <p className="mt-1 text-xs text-slate-500 sm:text-sm">
-                  Build a strong foundation with flexible, job-ready degrees.
-                </p>
-              </div>
-            </div>
-
-            {renderScrollingRow(undergraduatePrograms, "left")}
-          </div>
-
-          {/* Postgraduate */}
-          <div className="rounded-3xl bg-white/80 p-5 shadow-sm ring-1 ring-slate-100 backdrop-blur-sm sm:p-6 md:p-8">
-            <div className="mb-5 flex items-center justify-between gap-3">
-              <div>
-                <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
+        {/* Postgraduate section */}
+        <div className="mt-10 rounded-xl border border-slate-200 bg-white p-5 sm:p-7 md:p-9">
+          <div className="grid gap-6 md:gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.6fr)] lg:items-stretch">
+            {/* Featured Master's card */}
+            <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 sm:p-7 md:p-8">
+              <div className="space-y-3">
+                <span className="text-[11px] font-medium uppercase tracking-widest text-slate-400">
                   Postgraduate
+                </span>
+                <h3 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Master&apos;s Programs
                 </h3>
-                <p className="mt-1 text-xs text-slate-500 sm:text-sm">
-                  Advance your career with specialized, industry-relevant
-                  programs.
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Advance your career with comprehensive, flexible online
+                  postgraduate degrees designed with industry experts.
                 </p>
+              </div>
+              <div className="mt-6 flex flex-col gap-4 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-xs text-slate-500">
+                  MBA · MCA · MA · M.Com · Live sessions · Placement support
+                </p>
+                <button className="w-fit rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">
+                  Explore
+                </button>
               </div>
             </div>
 
-            {renderScrollingRow(postgraduatePrograms, "right")}
+            {/* Scrollable PG cards */}
+            <div className="relative">
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-linear-to-r from-white to-transparent sm:w-16" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-linear-to-l from-white to-transparent sm:w-16" />
+
+              <div className="flex gap-4 overflow-x-auto pb-2 pt-1 sm:gap-5">
+                {postgraduatePrograms.map((program) => (
+                  <ProgramCard key={program.code} program={program} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Undergraduate section */}
+        <div className="mt-10 rounded-xl border border-slate-200 bg-sky-50 px-5 py-8 text-slate-900 sm:px-7 md:px-9 md:py-10">
+          <div className="grid gap-8 md:gap-10 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1.1fr)] lg:items-stretch">
+            {/* Scrollable UG cards */}
+            <div className="relative order-2 lg:order-1">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <div>
+                  <h3 className="text-base font-semibold sm:text-lg">
+                    Undergraduate Programs
+                  </h3>
+                  <p className="mt-1 text-xs text-slate-600 sm:text-sm">
+                    Build a strong foundation with future-ready online
+                    bachelor&apos;s degrees.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 overflow-x-auto pb-3 pt-1 sm:gap-5 sm:pb-4 md:pb-5">
+                {undergraduatePrograms.map((program) => (
+                  <ProgramCard key={program.code} program={program} />
+                ))}
+              </div>
+            </div>
+
+            {/* Featured Undergraduate card */}
+            <div className="order-1 flex flex-col justify-between rounded-xl border border-sky-200 bg-white p-6 text-slate-900 sm:p-7 md:p-8 lg:order-2">
+              <div className="space-y-3">
+                <span className="text-[11px] font-medium uppercase tracking-widest text-slate-400">
+                  Undergraduate
+                </span>
+                <h3 className="text-xl font-semibold sm:text-2xl">
+                  Undergraduate Programs
+                </h3>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Pursue excellence with one of our online undergraduate
+                  programs and kickstart your career with globally recognized
+                  degrees in business, technology, and the arts.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-col gap-4 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-xs text-slate-500">
+                  BCom · BCA · BBA · BA · Expert faculty · Career guidance
+                </p>
+                <button className="w-fit rounded-lg border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-slate-800 transition hover:border-sky-300 hover:bg-sky-100">
+                  Explore Programs
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="mt-10 flex justify-center">
-          <button className="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-400/40 transition hover:bg-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950">
-            Explore Programs
+          <button className="rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50">
+            View All Programs
           </button>
         </div>
       </div>
     </section>
-    </>
   );
 };
 

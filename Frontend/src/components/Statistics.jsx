@@ -133,7 +133,7 @@ const Statistics = () => {
       </style>
       <section
         ref={sectionRef}
-        className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+        className="bg-linear-to-b from-slate-950 via-slate-800 to-slate-950 max-w-screen overflow-x-hidden"
       >
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="mb-6 text-center sm:mb-8">

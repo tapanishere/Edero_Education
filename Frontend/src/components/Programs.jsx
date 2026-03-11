@@ -1,6 +1,7 @@
 import Header from './Header'
 import ProgramHero from'./ProgramsHero'
 import Degrees from './Degrees'
+import DegreeSection from './DegreeSection'
 import Universities from './universities'
 import Footer from './Footer'
 const Programs = () => {
@@ -9,6 +10,7 @@ const Programs = () => {
       <Header/>
       <ProgramHero/>
       <Degrees/>
+      <DegreeSection/>
       <Universities/>
       <Footer/>
     </div>

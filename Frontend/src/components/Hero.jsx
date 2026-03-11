@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-slate-950 text-white">
+    <section className="relative flex min-h-screen items-stretch overflow-hidden bg-slate-900 text-white">
       {/* Background gradient overlay on the left */}
       <div
-        className="pointer-events-none absolute inset-y-0 left-0 w-full bg-linear-to-r from-slate-950 via-slate-950/90 to-slate-900/30 lg:w-2/3"
+        className="pointer-events-none absolute inset-y-0 left-0 w-full bg-linear-to-r from-slate-950 via-slate-900 to-slate-900/30 lg:w-2/3"
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-12 px-4 py-16 sm:px-6 lg:flex-row lg:items-center lg:py-24 lg:px-8">
+      <div className="relative mx-auto flex max-w-7xl flex-1 flex-col justify-between pt-16 sm:px-6 lg:flex-row lg:items-stretch lg:py-24 lg:px-8">
         {/* Left: Text content */}
-        <div className="relative z-10 max-w-xl space-y-6">
+        <div className="relative z-10 max-w-xl space-y-6 ">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
             Online &amp; Hybrid Degrees
           </p>
@@ -71,15 +71,12 @@ const Hero = () => {
 
 
         {/* Right: Image */}
-        <div className="relative flex-1">
-          <div className="mx-auto max-w-md lg:max-w-none">
-            <div className="overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-900/40 shadow-2xl shadow-black/40">
-              {/* Replace the div below with an <img> tag when your asset is ready */}
-              <div className="aspect-4/3 w-full bg-cover bg-center sm:aspect-video">
-                <img src={image} alt="" className=" h-full w-full"/>
-              </div>
-            </div>
-          </div>
+        <div className=" relative mt-10 w-full max-w-md self-center overflow-hidden rounded-2xl shadow-xl sm:max-w-lg sm:mt-12 lg:absolute lg:right-0 lg:bottom-0 lg:z-10 lg:flex lg:w-[50%] lg:h-[90%] lg:max-w-none lg:rounded-none lg:shadow-none">
+          <img
+            src={image}
+            alt="Learners and professionals"
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
     </section>

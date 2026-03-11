@@ -10,20 +10,26 @@ import AddmissionProcess from './AddmissionProcess'
 import CareerValues from './CareerValues'
 import Categories from './Categories'
 import Testimonials from './Testimonials'
+import FaqSection from './FaqSection'
+import Guidance from './Guidance'
+import ExecutiveCourses from './ExecutiveCourses'
 const Home = () => {
   return (
     <>
     <div>
         <Header />
         <Hero/>
-        <Statistics/>
         <UniversitisList/>
+        <Statistics/>
         <DegreeSection/>
+        <ExecutiveCourses/>
+        <Guidance/>
         <Whyedero/>
         <AddmissionProcess/>
         <CareerValues/>
         <Categories/>
         <Testimonials/>
+        <FaqSection/>
         <Footer/>
     </div>
     </>

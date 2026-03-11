@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const ProgramsHero = () => {
   return (
-    <section className="w-full h-[calc(100vh-150px)] flex justify-center  bg-linear-to-r from-slate-900 via-slate-950 to-slate-900 text-white">
+    <section className="w-full md:h-[calc(100vh-150px)] flex justify-center  bg-linear-to-r from-slate-900 via-slate-950 to-slate-900 text-white">
       <div className="mx-auto  flex max-w-6xl flex-col items-center gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
         {/* Left content */}
         <div className="max-w-2xl text-center ">

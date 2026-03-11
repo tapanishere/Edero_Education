@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
     
-    <div className='flex justify-between items-center h-16 bg-slate-950 text-white shadow-md px-4'>
+    <div className='flex justify-between items-center h-16 bg-slate-800 text-white shadow-md px-4'>
         <div className='flex items-center gap-2'>
             <HiBars3 onClick={toggleMenu} className={`w-7 h-7 block md:hidden font-bold ${isOpen ? 'hidden' : 'block'}`} />
             <img src="/Logo/clint_img1_remove.png" alt="logo" className='w-10 h-10 ' />

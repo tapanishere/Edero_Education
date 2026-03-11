@@ -2,7 +2,27 @@
 body {
     font-family: 'Inter', sans-serif;
   }
-  
+
   h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes scroll-right-to-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll-r2l {
+    animation: scroll-right-to-left 20s linear infinite;
   }

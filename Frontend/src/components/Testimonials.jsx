@@ -64,7 +64,7 @@ const Testimonials = () => {
     const loopedTestimonials = [...testimonials, ...testimonials];
 
     return (
-        <section className="w-full bg-gradient-to-b from-[#dfe8ff] via-[#e8f2ff] to-[#d9e9ff] py-16 md:py-24">
+        <section className="w-full bg-linear-to-b from-[#dfe8ff] via-[#e8f2ff] to-[#d9e9ff] py-16 md:py-24">
             <div className="mx-auto flex max-w-6xl flex-col items-center px-4 text-center text-sky-900 lg:px-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-sky-500">
                     Student Success Stories
@@ -97,10 +97,10 @@ const Testimonials = () => {
                             {loopedTestimonials.map((t, index) => (
                                 <article
                                     key={`${t.name}-${index}`}
-                                    className="relative flex border-3 border-orange-600 min-w-[260px] max-w-xs flex-col rounded-3xl bg-white px-5 pb-6 pt-10 text-left shadow-md sm:min-w-[280px] md:min-w-[320px] md:px-7 md:pb-8"
+                                    className="relative flex border-3 border-stone-200 min-w-[260px] max-w-xs flex-col rounded-3xl bg-white px-5 pb-6 pt-10 text-left shadow-md sm:min-w-[280px] md:min-w-[320px] md:px-7 md:pb-8"
                                 >
                                     {/* Avatar */}
-                                    <div className="absolute border-3 border-orange-700 -top-10 left-1/2 h-16 w-16 -translate-x-1/2 overflow-hidden rounded-full  shadow-md">
+                                    <div className="absolute border-3 border-stone-700 -top-10 left-1/2 h-16 w-16 -translate-x-1/2 overflow-hidden rounded-full  shadow-md">
                                         <img
                                             src={t.img}
                                             alt={t.name}

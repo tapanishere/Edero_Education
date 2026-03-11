@@ -34,7 +34,6 @@ const AboutHero = () => {
             </p>
           </div>
 
-          {/* Statistics */}
           <div className="mt-8 flex flex-wrap gap-4 sm:gap-6 md:gap-8">
             <StatCard
               icon={

@@ -2,7 +2,6 @@ import React from 'react'
 import  Header from './Header'
 import Hero from './Hero'
 import Statistics from './Statistics'
-import DegreeSection from './DegreeSection'
 import Whyedero from './Whyedero'
 import UniversitisList from './UniversitisList'
 import Footer from './Footer'
@@ -13,6 +12,7 @@ import Testimonials from './Testimonials'
 import FaqSection from './FaqSection'
 import Guidance from './Guidance'
 import ExecutiveCourses from './ExecutiveCourses'
+import DegreeData from './DegreeData'
 const Home = () => {
   return (
     <>
@@ -21,7 +21,7 @@ const Home = () => {
         <Hero/>
         <UniversitisList/>
         <Statistics/>
-        <DegreeSection/>
+        <DegreeData/>
         <ExecutiveCourses/>
         <Guidance/>
         <Whyedero/>

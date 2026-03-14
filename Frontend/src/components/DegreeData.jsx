@@ -457,46 +457,69 @@ const ProgramsSection = () => {
 
 </div>
 
-      {/* Modal */}
-      {selectedCourse && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm px-4">
+{selectedCourse && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
 
-    <div className="w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
+    <div className="w-full max-w-md overflow-hidden rounded-2xl shadow-2xl">
 
-      {/* Modal Header */}
-      <div className="relative bg-linear-to-r from-slate-900 to-slate-800 px-6 py-5 text-white">
+      {/* Gradient Header */}
+      <div className="relative bg-linear-to-br from-purple-700 via-purple-600 to-blue-600 px-6 py-6 text-white">
 
-        <h3 className="text-lg font-bold tracking-wide">
+        <h3 className="text-xl font-bold">
           {selectedCourse[0].code} Specializations
         </h3>
 
-        <p className="text-xs text-amber-300 mt-1">
+        <p className="text-sm opacity-90 mt-1">
           Choose your preferred specialization
         </p>
 
-        {/* Close button */}
+        {/* Close */}
         <button
           onClick={() => setSelectedCourse(null)}
-          className="absolute right-4 top-4 rounded-md bg-white/10 px-2 py-1 text-xs font-semibold hover:bg-white/20"
+          className="absolute top-4 right-4 text-white text-lg"
         >
           ✕
         </button>
 
+        {/* Features */}
+        <div className="mt-6 space-y-3">
+
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-sm">✓</span>
+            <span className="text-sm font-medium">Multiple Specializations</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-sm">✓</span>
+            <span className="text-sm font-medium">Flexible Schedule</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-sm">✓</span>
+            <span className="text-sm font-medium">Experienced Faculty</span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-white text-sm">✓</span>
+            <span className="text-sm font-medium">Academic Support</span>
+          </div>
+
+        </div>
       </div>
 
       {/* Specialization List */}
-      <div className="p-6 space-y-3">
+      <div className="bg-white p-6 space-y-3">
 
         {selectedCourse.map((course) => (
           <div
             key={course.id}
-            className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-amber-300 hover:bg-amber-50"
+            className="flex items-center justify-between rounded-lg border border-slate-200 px-4 py-3 hover:border-purple-400 hover:bg-purple-50 transition"
           >
             <span className="text-sm font-medium text-slate-700">
               {course.specialization}
             </span>
 
-            <span className="text-xs font-semibold text-amber-600">
+            <span className="text-xs font-semibold text-purple-600">
               {course.duration}
             </span>
           </div>
@@ -505,19 +528,16 @@ const ProgramsSection = () => {
       </div>
 
       {/* Footer */}
-      <div className="flex justify-end border-t border-slate-200 px-6 py-4">
-
+      <div className="flex justify-end bg-white border-t px-6 py-4">
         <button
           onClick={() => setSelectedCourse(null)}
-          className="rounded-lg bg-slate-900 px-5 py-2 text-sm font-semibold text-amber-400 transition hover:bg-slate-800"
+          className="rounded-lg bg-purple-600 px-5 py-2 text-sm font-semibold text-white hover:bg-purple-700"
         >
           Close
         </button>
-
       </div>
 
     </div>
-
   </div>
 )}
 

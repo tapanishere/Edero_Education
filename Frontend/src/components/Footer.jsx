@@ -122,32 +122,25 @@ const Footer = () => {
 
             <div className="flex items-center gap-3 mt-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1CA6KEMSS2/"
                 aria-label="Facebook"
                 className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200"
               >
                 <FaFacebookF size={14} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/ederoeducation?igsh=MnhzbW9ncDd0cjE5"
                 aria-label="Instagram"
                 className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200"
               >
                 <FaInstagram size={14} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/edero-education-328482323?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 aria-label="LinkedIn"
                 className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200"
               >
                 <FaLinkedinIn size={14} />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-600 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200"
-              >
-                <FaYoutube size={14} />
               </a>
             </div>
           </div>

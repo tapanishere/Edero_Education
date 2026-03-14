@@ -1,6 +1,9 @@
 import React from 'react';
 import { HiStar } from 'react-icons/hi2';
-
+import g1 from '../assets/images/g1.jpg'
+import g2 from '../assets/images/g2.jpg'
+import g3 from '../assets/images/g3.png'
+import g4 from '../assets/images/g4.jpg'
 const expertsData = [
   {
     id: 1,
@@ -8,7 +11,7 @@ const expertsData = [
     role: 'Senior Mentor',
     experience: '4 years experience',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop',
+    image: g1,
   },
   {
     id: 2,
@@ -16,7 +19,7 @@ const expertsData = [
     role: 'Senior Mentor',
     experience: '4 years experience',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop',
+    image: g2,
   },
   {
     id: 3,
@@ -24,7 +27,7 @@ const expertsData = [
     role: 'Career Expert',
     experience: '6 years experience',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
+    image: g3,
   },
   {
     id: 4,
@@ -32,7 +35,7 @@ const expertsData = [
     role: 'Education Expert',
     experience: '5 years experience',
     rating: 4.4,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop',
+    image: g4,
   },
 ];
 

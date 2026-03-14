@@ -3,7 +3,7 @@ import image from '../assets/images/careers.webp'
 const CareerHero = () => {
 
   const handleApplyNow =  () => {
-    const mail = "punyabrata900@gmail.com"
+    const mail = "ederoeducation@gmail.com"
     const subject = encodeURIComponent("Resume for Job Opportunity");
     const body = encodeURIComponent("Hi Team Edero,\n\n");
   

@@ -1,23 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import student_1 from '../assets/images/student_1.png'
+import student_2 from '../assets/images/student_2.jpg'
+import student_3 from '../assets/images/student_3.jpg'
 const testimonials = [
     {
         name: "Rahul Sharma",
         role: "Online MBA Student",
         title: "Edero Education helped me complete my MBA",
-        img: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400",
+        img: student_2,
     },
     {
-        name: "Priya Singh",
+        name: "Priya maity",
         role: "BBA Student",
         title: "The admission process was very smooth and I got expert guidance and support throughout my enrollment.",
-        img: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400",
+        img: student_1,
     },
     {
         name: "Amit Verma",
         role: "MCA Student",
         title: "Great experience with Edero Education",
-        img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400",
+        img: student_3,
     },
 ];
 

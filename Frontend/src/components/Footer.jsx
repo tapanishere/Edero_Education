@@ -106,18 +106,16 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <FaPhoneAlt className="text-amber-400" />
-                <span>+1 234 567 8900</span>
+                <span>+91 78 1199 6806</span>
               </li>
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-amber-400" />
-                <span>info@ederoeducation.com</span>
+                <span>ederoeducation@gmail.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <FaMapMarkerAlt className="text-amber-400 mt-1" />
                 <span>
-                  1234 Education Lane,
-                  <br />
-                  City, State, 56789
+                West Bengal
                 </span>
               </li>
             </ul>

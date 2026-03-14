@@ -30,7 +30,7 @@ const CareerDetails = () => {
   
 
     const handleApplyNow =  () => {
-        const mail = "punyabrata900@gmail.com"
+        const mail = "ederoeducation@gmail.com"
         const subject = encodeURIComponent("Resume for Job Opportunity");
         const body = encodeURIComponent("Hi Team Edero,\n\n");
       
@@ -136,7 +136,7 @@ const CareerDetails = () => {
               <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-amber-400 text-[11px] font-bold text-slate-900">
                 @
               </span>
-              <span>hr@ederoeducation.com</span>
+              <span>ederoeducation@gmail.com</span>
             </button>
           </div>
         </div>

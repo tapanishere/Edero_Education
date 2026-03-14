@@ -19,7 +19,7 @@ const Contactbody = () => {
       </div>
 
       {/* Content */}
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 lg:flex-row lg:py-16">
+      <div className="mx-auto flex max-w-6xl justify-center gap-10 px-4 py-10  lg:py-16">
         {/* Quick Contact */}
         <div className="w-full rounded-xl bg-slate-900/80 p-6 shadow-xl shadow-black/40 ring-1 ring-slate-800/80 lg:w-5/12">
           <h2 className="text-xl font-semibold tracking-wide text-amber-300 sm:text-2xl">
@@ -82,18 +82,6 @@ const Contactbody = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Map */}
-        <div className="w-full overflow-hidden rounded-xl bg-slate-900/50 shadow-xl shadow-black/40 ring-1 ring-slate-800/80 lg:w-7/12">
-          <iframe
-            title="Edero Education Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509249!2d144.95373631590493!3d-37.81627974251383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAwLjYiUyAxNDTCsDU3JzE0LjUiRQ!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
-            className="h-64 w-full border-0 sm:h-80 md:h-96"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
         </div>
       </div>
     </section>

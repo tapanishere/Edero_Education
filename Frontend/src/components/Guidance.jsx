@@ -4,7 +4,7 @@ import { HiStar } from 'react-icons/hi2';
 const expertsData = [
   {
     id: 1,
-    name: 'Anisha Roy',
+    name: 'Anushree dey',
     role: 'Senior Mentor',
     experience: '4 years experience',
     rating: 4.6,
@@ -12,7 +12,7 @@ const expertsData = [
   },
   {
     id: 2,
-    name: 'Priydutt Sharma',
+    name: 'Suman Sharma',
     role: 'Senior Mentor',
     experience: '4 years experience',
     rating: 4.7,
@@ -37,9 +37,9 @@ const expertsData = [
 ];
 
 const handleApplyNow = () => {
-    const mail = "punyabrata900@gmail.com";
+    const mail = "ederoeducation@gmail.com";
     const subject = encodeURIComponent("Counseling Request");
-    const body = encodeURIComponent("Hi Team Edero,\n\nI would like to request a counseling session with you. Please let me know the available slots and the best time for me to schedule the session.");
+    const body = encodeURIComponent("Hi Team Edero,\n\nI would like to request a counseling session with you. Please let me know the available slots and the best time for me to schedule the session.,\n\n Number:");
 
     window.open(
       `https://mail.google.com/mail/?view=cm&fs=1&to=${mail}&su=${subject}&body=${body}`,
@@ -63,7 +63,7 @@ const Guidance = () => {
             <span className="text-red-500">From Experts</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
-            Since 2014, Hike Education&apos;s team of 500+ experts has been dedicated to guiding you toward a successful career.
+            Since 2018, Edero Education&apos;s team of 200+ experts has been dedicated to guiding you toward a successful career.
           </p>
         </div>
 

@@ -8,54 +8,7 @@ import {
 } from "react-icons/hi";
 
 const jobsData = [
-  {
-    id: 1,
-    jobTitle: "Senior Frontend Developer",
-    jobDescription:
-      "We are looking for a passionate Frontend Developer to join our team and help build engaging, accessible learning experiences for students across India. You will work with modern React, collaborate with design and backend teams, and own features from concept to production.",
-    experience: "3-5 years",
-    location: "Remote / Bangalore",
-    type: "Full-time",
-    salary: "₹12-18 LPA",
-    responsibilities: [
-      "Build responsive, accessible UI with React and Tailwind CSS",
-      "Own features from design to deployment",
-      "Write clean, maintainable code and tests",
-      "Collaborate in an agile, remote-friendly team",
-    ],
-  },
-  {
-    id: 2,
-    jobTitle: "Product Designer",
-    jobDescription:
-      "Join our product team to shape learning experiences for millions of students. You will own UX research, wireframes, and high-fidelity designs and work closely with engineering to ship impactful features.",
-    experience: "2-4 years",
-    location: "Hybrid / Mumbai",
-    type: "Full-time",
-    salary: "₹8-14 LPA",
-    responsibilities: [
-      "Lead UX research and design for web and mobile",
-      "Create wireframes, prototypes and design systems",
-      "Collaborate with product and engineering",
-      "Advocate for accessibility and usability",
-    ],
-  },
-  {
-    id: 3,
-    jobTitle: "Backend Engineer",
-    jobDescription:
-      "Help scale our platform and APIs that power learning content and assessments. You will work with Node.js, databases, and cloud services to build reliable, performant backend systems.",
-    experience: "3-5 years",
-    location: "Remote",
-    type: "Full-time",
-    salary: "₹12-18 LPA",
-    responsibilities: [
-      "Design and implement APIs and services",
-      "Optimize database queries and caching",
-      "Ensure security, monitoring and reliability",
-      "Work in an agile, cross-functional team",
-    ],
-  },
+  
 ];
 
 const MetaItem = ({ icon: Icon, label, value }) => (
@@ -74,7 +27,7 @@ const MetaItem = ({ icon: Icon, label, value }) => (
 
 const Jobs = () => {
   const handleApplyNow = (title) => {
-    const mail = "punyabrata900@gmail.com";
+    const mail = "ederoeducation@gmail.com";
     const subject = encodeURIComponent("Resume for Job Opportunity " + title);
     const body = encodeURIComponent("Hi Team Edero,\n\n");
 

@@ -13,6 +13,7 @@ import FaqSection from './FaqSection'
 import Guidance from './Guidance'
 import ExecutiveCourses from './ExecutiveCourses'
 import DegreeData from './DegreeData'
+import Accreditations from './Accreditations'
 const Home = () => {
   return (
     <>
@@ -21,6 +22,7 @@ const Home = () => {
         <Hero/>
         <UniversitisList/>
         <Statistics/>
+        <Accreditations/>
         <DegreeData/>
         <ExecutiveCourses/>
         <Guidance/>

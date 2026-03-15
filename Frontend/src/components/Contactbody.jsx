@@ -39,7 +39,7 @@ const Contactbody = () => {
               </span>
               <div>
                 <p className="font-medium text-slate-50">Phone</p>
-                <p className="text-slate-200/80">+1 234 567 8900</p>
+                <p className="text-slate-200/80">+91 78 1199 6806</p>
               </div>
             </div>
 
@@ -57,7 +57,7 @@ const Contactbody = () => {
               </span>
               <div>
                 <p className="font-medium text-slate-50">Email</p>
-                <p className="text-slate-200/80">info@ederoeducation.com</p>
+                <p className="text-slate-200/80">ederoeducation@gmail.com</p>
               </div>
             </div>
 
@@ -75,10 +75,8 @@ const Contactbody = () => {
               <div>
                 <p className="font-medium text-slate-50">Address</p>
                 <p className="text-slate-200/80">
-                  1234 Education Lane,
-                  <br />
-                  City, State, 56789
-                </p>
+                West Bengal
+                </p> 
               </div>
             </div>
           </div>
